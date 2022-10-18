@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/irfan',function(){
     return "hello irfan em";
 });
+
+Route::fallback( function(){
+    return "Page Not found ! error 4040.";
+});

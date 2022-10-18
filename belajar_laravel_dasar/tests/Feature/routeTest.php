@@ -25,4 +25,9 @@ class routeTest extends TestCase
             ->assertStatus(200)
             ->assertSeeText('irfan');
     }
+
+    public function testFallback(){
+        $this->get('/tidakada')
+            ->assertSeeText("Page Not found ! error 4040.");
+    }
 }
